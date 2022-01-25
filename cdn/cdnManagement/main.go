@@ -69,9 +69,7 @@ func createProfile(ctx context.Context, cred azcore.TokenCredential) (*armcdn.Pr
 		resourceGroupName,
 		profileName,
 		armcdn.Profile{
-			TrackedResource: armcdn.TrackedResource{
-				Location: to.StringPtr("Global"),
-			},
+			Location: to.StringPtr("Global"),
 			SKU: &armcdn.SKU{
 				Name: armcdn.SKUNamePremiumVerizon.ToPtr(),
 			},
